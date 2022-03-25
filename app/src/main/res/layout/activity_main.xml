@@ -1,0 +1,214 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="20dp"
+    tools:context=".MainActivity">
+
+
+    <TextView
+        android:id="@+id/textView4"
+        android:layout_marginTop="10dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="原价"
+        android:textSize="20sp" />
+
+    <EditText
+        android:id="@+id/yuanJia"
+        android:layout_width="match_parent"
+        android:layout_alignBaseline="@id/textView4"
+        android:layout_toRightOf="@+id/textView4"
+        android:layout_height="wrap_content"
+        android:inputType="numberDecimal" />
+
+    <TextView
+        android:id="@+id/textView7"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/textView4"
+        android:layout_marginTop="20dp"
+        android:text="原数量"
+        android:textSize="20sp" />
+
+    <EditText
+        android:id="@+id/yuanNumber"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:layout_alignBaseline="@id/textView7"
+        android:layout_below="@+id/yuanJia"
+        android:layout_toRightOf="@+id/textView7"
+        android:inputType="numberDecimal" />
+
+    <TextView
+        android:id="@+id/textView8"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/textView7"
+        android:layout_marginTop="20dp"
+        android:text="现价"
+        android:textSize="20sp" />
+
+    <EditText
+        android:id="@+id/xianJia"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+
+        android:layout_alignBaseline="@id/textView8"
+        android:layout_below="@+id/yuanNumber"
+        android:layout_toRightOf="@+id/textView8"
+        android:inputType="numberDecimal" />
+
+    <TextView
+        android:id="@+id/textView9"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/textView8"
+        android:layout_marginTop="20dp"
+        android:text="新购买数量"
+        android:textSize="20sp" />
+
+    <EditText
+        android:id="@+id/newNumber"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:layout_below="@+id/xianJia"
+        android:layout_alignBaseline="@id/textView9"
+        android:layout_toRightOf="@+id/textView9"
+        android:inputType="numberDecimal" />
+
+    <TextView
+        android:id="@+id/textView11"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/textView9"
+        android:layout_marginTop="20dp"
+        android:text="原涨跌幅"
+        android:textSize="20sp" />
+
+    <EditText
+        android:id="@+id/oldZhangDieFu"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@id/textView11"
+        android:layout_below="@+id/newNumber"
+        android:layout_toRightOf="@+id/textView11"
+        android:inputType="numberDecimal" />
+
+    <TextView
+        android:id="@+id/textView10"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/textView11"
+        android:layout_marginTop="20dp"
+        android:text="新涨跌幅"
+        android:textSize="20sp" />
+
+    <EditText
+        android:id="@+id/newZhangDieFu"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:layout_alignBaseline="@id/textView10"
+        android:layout_below="@+id/oldZhangDieFu"
+        android:layout_toRightOf="@+id/textView10" />
+
+    <TextView
+        android:id="@+id/textView12"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/textView10"
+        android:layout_marginTop="20dp"
+        android:text="总价"
+        android:textSize="20sp" />
+
+    <EditText
+        android:id="@+id/et_zongJia"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:layout_alignBaseline="@id/textView12"
+        android:layout_below="@+id/newZhangDieFu"
+        android:layout_toRightOf="@+id/textView12" />
+
+    <TextView
+        android:id="@+id/textView13"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/textView12"
+        android:layout_marginTop="20dp"
+        android:text="均价"
+        android:textSize="20sp" />
+
+    <EditText
+        android:id="@+id/et_junJia"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:layout_alignBaseline="@id/textView13"
+        android:layout_below="@+id/et_zongJia"
+        android:layout_toRightOf="@+id/textView13" />
+    <TextView
+        android:id="@+id/tv_new_buy_price"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/textView13"
+        android:layout_marginTop="20dp"
+        android:text="新购买金额"
+        android:textSize="20sp" />
+
+    <EditText
+        android:id="@+id/et_new_buy_price"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:layout_alignBaseline="@id/tv_new_buy_price"
+        android:layout_below="@+id/et_junJia"
+        android:layout_toRightOf="@+id/tv_new_buy_price" />
+    <TextView
+        android:id="@+id/textView14"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/tv_new_buy_price"
+        android:layout_marginTop="20dp"
+        android:text="回本所需"
+        android:textSize="20sp" />
+
+    <TextView
+        android:id="@+id/tv_huiBenXuZhang"
+        android:layout_width="match_parent"
+        android:layout_height="30dp"
+        android:gravity="center_vertical"
+        android:paddingLeft="10dp"
+        android:textSize="20sp"
+        android:layout_alignBaseline="@id/textView14"
+        android:layout_below="@+id/et_new_buy_price"
+        android:layout_toRightOf="@+id/textView14" />
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:layout_marginTop="15dp"
+        android:text="计  算  涨  跌  幅"
+        android:textSize="20sp"
+        android:onClick="calculateRange"
+        android:id="@+id/btn1"
+        android:background="@color/colorAccent"
+        android:layout_below="@+id/textView14" />
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:layout_marginTop="15dp"
+        android:text="计算新购买数量"
+        android:textSize="20sp"
+        android:onClick="calculateNum"
+        android:background="@color/colorAccent"
+        android:layout_below="@+id/btn1"
+
+        />
+</RelativeLayout>
