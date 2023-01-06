@@ -1,20 +1,23 @@
 package cn.org.bjca.optionsrange;
 
-import androidx.appcompat.app.AppCompatActivity;
-
+import android.content.Intent;
 import android.os.Bundle;
 import android.text.TextUtils;
 import android.view.View;
+import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import androidx.appcompat.app.AppCompatActivity;
+
 import java.text.DecimalFormat;
 
-public class MainActivity extends AppCompatActivity {
+public class MainActivity extends AppCompatActivity implements View.OnClickListener {
     private EditText yuanJia, oldNumber, xianJia, newNumber, newZhangDieFu, oldZhangDieFu, et_zongJia, et_junJia, et_new_buy_price;
     private TextView tv_huiBenXuZhang;
     private DecimalFormat df;
+    private Button btn_next;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -30,7 +33,8 @@ public class MainActivity extends AppCompatActivity {
         et_junJia = findViewById(R.id.et_junJia);
         tv_huiBenXuZhang = findViewById(R.id.tv_huiBenXuZhang);
         et_new_buy_price = findViewById(R.id.et_new_buy_price);
-
+        btn_next = findViewById(R.id.next);
+        btn_next.setOnClickListener(this);
     }
 
     public void calculateRange(View view) {
@@ -86,6 +90,14 @@ public class MainActivity extends AppCompatActivity {
             newNumber.setText(df.format(newnumber));
 
             tv_huiBenXuZhang.setText(df.format(huiBenXuZhang * 100) + "%");
+        }
+    }
+
+    @Override
+    public void onClick(View v) {
+        switch (v.getId()) {
+            case R.id.next:
+                startActivity(new Intent(this, SecondActivity.class));
         }
     }
 }

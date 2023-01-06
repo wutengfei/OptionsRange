@@ -151,6 +151,7 @@
         android:layout_alignBaseline="@id/textView13"
         android:layout_below="@+id/et_zongJia"
         android:layout_toRightOf="@+id/textView13" />
+
     <TextView
         android:id="@+id/tv_new_buy_price"
         android:layout_width="wrap_content"
@@ -168,6 +169,7 @@
         android:layout_alignBaseline="@id/tv_new_buy_price"
         android:layout_below="@+id/et_junJia"
         android:layout_toRightOf="@+id/tv_new_buy_price" />
+
     <TextView
         android:id="@+id/textView14"
         android:layout_width="wrap_content"
@@ -196,18 +198,28 @@
         android:textSize="20sp"
         android:onClick="calculateRange"
         android:id="@+id/btn1"
-        android:background="@color/colorAccent"
+        android:background="@drawable/btn_shape"
         android:layout_below="@+id/textView14" />
 
     <Button
         android:layout_width="match_parent"
         android:layout_height="40dp"
+        android:id="@+id/btn_buy_number"
         android:layout_marginTop="15dp"
         android:text="计算新购买数量"
         android:textSize="20sp"
         android:onClick="calculateNum"
-        android:background="@color/colorAccent"
-        android:layout_below="@+id/btn1"
+        android:background="@drawable/btn_shape"
+        android:layout_below="@+id/btn1" />
 
-        />
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="40dp"
+        android:layout_alignParentBottom="true"
+        android:text="下一页"
+        android:textSize="20sp"
+        android:id="@+id/next"
+        android:background="@drawable/btn_shape"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true" />
 </RelativeLayout>
